@@ -1,0 +1,9 @@
+class Main {
+    public static void main(String s[]) {
+        int a = 5;
+        int b = 10;
+        int c = 8;
+        System.out.println((a > b) ? a : b);
+        System.out.println((a > b && a > c) ? a : ((b > c) ? b : c));
+    }
+}
