@@ -1,0 +1,15 @@
+class Main {
+    public static void main(String s[]) {
+        byte a =100;
+        byte b =99;
+        byte c = (byte) (a + b);
+        byte d = (byte) (a - b);
+        byte e = (byte) (a * b);
+        byte f = (byte) (a / b);
+
+        System.out.println("a + b = " + c);
+        System.out.println("a - b = " + d);
+        System.out.println("a * b = " + e);
+        System.out.println("a / b = " + f);
+    }
+}
