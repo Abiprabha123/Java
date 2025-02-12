@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        int i = 2;
+        int limit = 1000; 
+
+        System.out.println("Prime numbers up to " + limit + ":");
+        do {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+            i++; 
+        } while (i <= limit); 
+    }
+
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        int divisor = 2;
+        do {
+            if (num % divisor == 0) {
+                return false;
+            }
+            divisor++;
+        } while (divisor <= Math.sqrt(num));
+        return true;
+    }
+}
