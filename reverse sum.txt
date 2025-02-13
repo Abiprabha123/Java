@@ -1,0 +1,54 @@
+public class Main {
+    public static void main(String[] args) {
+System.out.println("Odd numbers:");  
+int oddsum=0;
+     for (int i = 6; i >= 1; i--) {
+            if (i % 2 != 0)
+            {
+               System.out.println(i);
+               oddsum=oddsum+i;
+            }
+        }
+         System.out.println("Oddsum:"+oddsum);
+System.out.println("Even numbers:"); 
+int evensum=0;
+        for (int i = 6; i >= 1; i--) 
+        {
+            if (i % 2 == 0)
+            {
+                System.out.println(i);
+                evensum=evensum+i;
+            }
+        }
+        System.out.println("Evensum:"+evensum);
+
+
+ System.out.println("Prime numbers:");
+ int sum=0;
+        for (int i = 6; i >=2; i--) 
+        { 
+            if (isPrime(i))
+            {
+                System.out.println(i);
+                sum=sum+i;
+            }
+        }
+        System.out.println("Primesum:"+sum);
+
+
+    }
+
+    public static boolean isPrime(int num)
+    {
+       
+        for (int i = 2; i <= Math.sqrt(num); i++)
+        {
+            if (num % i == 0) 
+            {
+                return false; 
+            }
+        }
+        return true; 
+    }
+    }
+

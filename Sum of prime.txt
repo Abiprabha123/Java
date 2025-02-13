@@ -1,0 +1,47 @@
+public class Main {
+    public static void main(String[] args) {
+        int oddSum = 0;
+        for (int i = 1; i <= 6; i++) {
+            if (i % 2 != 0) {
+                oddSum += i; 
+            }
+        }
+        System.out.println("ODD SUM = " + oddSum);
+
+        int evenSum = 0;
+        for (int i = 1; i <= 6; i++) 
+        {
+            if (i % 2 == 0)
+            {
+                evenSum += i; 
+            }
+        }
+        System.out.println("EVEN SUM = " + evenSum);
+
+         int sum = 0;
+
+        for (int i = 2; i <= 6; i++) 
+        { 
+            if (isPrime(i))
+            {
+                sum += i; 
+            }
+        }
+
+        System.out.println("PRIME SUM = " + sum);
+    }
+
+    public static boolean isPrime(int num)
+    {
+       
+        for (int i = 2; i <= Math.sqrt(num); i++)
+        {
+            if (num % i == 0) 
+            {
+                return false; 
+            }
+        }
+        return true; 
+    }
+    }
+
