@@ -1,0 +1,45 @@
+public class Main {
+    public static void main(String[] args) {
+int val=123456;
+int oddsum=0;
+int evensum=0;
+int primesum=0;
+while(val>0)
+{
+    int digit=val%10;
+    val=val/10;
+    if(digit%2==1)
+    {
+        oddsum=(oddsum*10+digit);
+    }
+    else
+    {
+      evensum=(evensum*10+digit);
+    }
+}
+    System.out.println("oddsum=  "+oddsum );
+ System.out.println("evensum  ="+evensum);
+
+  int val1 = 123456; 
+        String oddDigits = ""; 
+        String evenDigits = ""; 
+
+        
+        while (val1 > 0) {
+            int digit1 = val1 % 10;
+            val1 = val1 / 10;        
+
+            if (digit1% 2 == 1) {  
+                oddDigits = digit1 + oddDigits; 
+            } else {               
+                evenDigits = digit1 + evenDigits; 
+            }
+        }
+
+        System.out.println("Odd Digits = " + oddDigits); 
+        System.out.println("Even Digits = " + evenDigits); 
+    }
+}
+
+    
+
