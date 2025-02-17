@@ -1,0 +1,45 @@
+Conversation opened. 1 read message.
+
+Skip to content
+Using Gmail with screen readers
+in:sent 
+1 of 113
+(no subject)
+
+Abi Prabha <abiprabha101010@gmail.com>
+Attachments
+15:25 (6 hours ago)
+to abiprabha12345
+
+
+One attachment
+  • Scanned by Gmail
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Scanner a = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int x = a.nextInt(); 
+         System.out.print("Enter the number of times: ");
+        int n = a.nextInt(); 
+        int sum = 0; 
+        int currentNumber = 0; 
+
+        for (int i = 0; i < n; i++) 
+        {
+            currentNumber = currentNumber * 10 + x; 
+            sum += currentNumber; 
+            System.out.print(currentNumber);
+            if (i < n - 1)
+            {
+                System.out.print(" + "); 
+            }
+        }
+
+        System.out.println("\nSum = " + sum);
+    }
+}
+sum of number iteration.txt
+Displaying sum of number iteration.txt.
