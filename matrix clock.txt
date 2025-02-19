@@ -1,0 +1,85 @@
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the value for rows and columns r & c:");
+        int r = in.nextInt();
+        int c = in.nextInt();
+        int arr[][] = new int[r][c];
+        System.out.println("Enter the values for the matrix:");
+        for (int i = 0; i < r; i++) 
+        {
+            for (int j = 0; j < c; j++)
+            {
+                System.out.print("Value for position " + i + "," + j + ": ");
+                arr[i][j] = in.nextInt();
+            }
+        }
+        System.out.println("Original Matrix:");
+        for (int i = 0; i < r; i++) 
+        {
+            for (int j = 0; j < c; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int row = 0, col = 0, prev, curr;
+        while (row < r && col < c)
+        {
+            if (row + 1 == r || col + 1 == c)
+                break;
+            prev = arr[row + 1][col];
+            for (int i = col; i < c; i++)
+            {
+                curr = arr[row][i];
+                arr[row][i] = prev;
+                prev = curr;
+            }
+            row++;
+            for (int i = row; i < r; i++) 
+            {
+                curr = arr[i][c - 1];
+                arr[i][c - 1] = prev;
+                prev = curr;
+            }
+            c--;
+            if (row < r) 
+            {
+                for (int i = c - 1; i >= col; i--)
+                {
+                    curr = arr[r - 1][i];
+                    arr[r - 1][i] = prev;
+                    prev = curr;
+                }
+            }
+            r--;
+            if (col < c)
+            {
+                for (int i = r - 1; i >= row; i--)
+                {
+                    curr = arr[i][col];
+                    arr[i][col] = prev;
+                    prev = curr;
+                }
+            }
+            col++;
+        }
+        System.out.println("Matrix after rotation:");
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[i].length; j++) 
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        in.close();
+    }
+}
+
+
+
