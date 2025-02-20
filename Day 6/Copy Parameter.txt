@@ -1,0 +1,34 @@
+  import java.util.*;
+
+class Main {
+    public static void main(String[] args)
+    {
+             Rectangle c = new Rectangle(20,30);
+             Rectangle b=new Rectangle(c);
+            c.display();
+            b.display();}
+}
+
+class Rectangle {
+    int Length;
+        int Width;
+
+    Rectangle(int Length,int Width)
+    {
+    this.Length=Length;
+    this.Width=Width;
+    }
+    Rectangle(Rectangle a)
+    {
+        this.Length=a.Length;
+        this.Width=a.Width;
+    }
+
+   
+
+    void display() {
+        System.out.println(Length);
+        System.out.println(Width);
+
+    }
+}

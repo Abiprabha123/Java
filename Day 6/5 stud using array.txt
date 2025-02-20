@@ -1,0 +1,45 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of students:");
+        int a = in.nextInt();     
+        in.nextLine(); 
+        Student Details[] = new Student[a];
+        for (int i = 0; i < a; i++) 
+        {
+            System.out.println("Enter Name:");
+            String n = in.nextLine();
+            System.out.println("Enter Regno. ");
+            int r = in.nextInt();
+            in.nextLine();
+            Details[i] = new Student();
+            Details[i].set(n, r);
+        }
+                    System.out.println();
+
+        
+
+        System.out.println("Details of all students:");
+        for (int i = 0; i < a; i++) {
+            Details[i].display();
+        }
+    }
+}
+
+class Student {
+    String Name;
+    int Regno;
+
+    void set(String n, int r) {
+        Name = n;
+        Regno = r;
+    }
+
+    void display() {
+        System.out.println("Name: " + Name);
+        System.out.println("Reg no.: " + Regno);
+    }
+}

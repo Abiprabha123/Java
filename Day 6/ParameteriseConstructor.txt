@@ -1,0 +1,26 @@
+ class Main {
+    public static void main(String[] args)
+    {
+             Car c = new Car();
+            c.setbrand("INOVA");
+            c.display();
+  }
+}
+
+class Car {
+    String brand ;
+    Car()  // this is the constructor created during obj creation
+
+    {
+    this.brand="unknown";
+    }
+
+    void setbrand(String brand) {
+       this.brand=brand;
+    }
+
+    void display() {
+        System.out.println("Brand name " + brand);
+    }
+}
+
