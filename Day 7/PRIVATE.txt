@@ -1,0 +1,45 @@
+ class Sum
+{
+        private int a,b;
+         public  void st_a(int a)
+        {
+            this.a=a;
+        }
+        public void st_b(int b)
+        {
+            this.b=b;
+        }
+
+        
+        public int get_a()
+        {
+            return a;
+        }
+        public int get_b()
+        {
+            return b;
+        }
+}
+class Sub extends Sum
+{
+    int c;
+    public void display()
+    {
+        c=get_a()+get_b();
+        System.out.println(c);
+    }
+}
+class Main
+{
+ public static void main (String[] args) 
+ {
+     
+      Sub s=new Sub();
+      s.st_a(5);
+      s.st_b(10);
+      s.display();
+    }
+}
+        
+    
+    

@@ -1,0 +1,50 @@
+import java.util.*;
+class Circle
+{
+   public static double area(int r)
+   {
+       return 3.14* r *r;
+   }
+}
+class Triangle
+{
+    public static double area()
+   {
+      int b=3;
+      int h=5;
+      return 0.5*b*h;
+   }
+}
+class Rectangle
+{
+    public static void area(int l,int w)
+   {
+       
+       System.out.println(l*w); 
+       
+   }
+}
+class Square
+{
+    public static void area()
+   {
+      int  s=5;
+       System.out.println(s*s); 
+       
+   }
+}
+
+
+
+
+class Main
+{
+    public static void main(String[] args) 
+    {
+       System.out.println( Triangle.area()); 
+        System.out.println(Circle.area(5));  
+        Rectangle.area(3,5); 
+        Square.area(); 
+    }
+}
+

@@ -1,0 +1,20 @@
+//in    arg    rt  i/p is given as parameter from main and o/p is returned to main like return a-b or int c=a-b retrn c 
+
+
+
+ import java.util.*;
+  public int div(int j,int k)
+    {
+       int l =j/k; 
+       return l;
+    }
+    
+public class Main
+{
+	public static void main(String[] args) {
+Calculator s= new Calculator();
+	   int m=s.div(20,10); 
+          System.out.println("div="+m); 
+
+	}
+}

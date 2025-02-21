@@ -1,0 +1,19 @@
+ //in no arg no rt i/p is given in class and o/p is also claculated in class 
+ import java.util.*;
+class Calculator{
+    public void get()
+    {
+       Scanner in=new Scanner(System.in);
+       int a=in.nextInt();
+       int b=in.nextInt();
+       int c=a+b; 
+        System.out.println("sum="+c); 
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Calculator s= new Calculator();
+       s.get();
+	}
+}

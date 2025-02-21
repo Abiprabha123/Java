@@ -1,0 +1,29 @@
+ import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+	{ int a,b;
+	   Scanner in=new Scanner(System.in);
+       a=in.nextInt();
+       b=in.nextInt();
+	Add s=new Add();
+	s.get(a,b);
+	s.sum();
+	}
+}
+class Add
+{     
+    int a,b,c;
+    
+    public void get(int a,int b)
+{
+   
+    this.a=a;
+    this.b=b;
+}
+    public void sum()
+    {
+       c=a+b;
+       System.out.println("sum = "+c);
+    }
+}

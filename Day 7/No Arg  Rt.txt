@@ -1,0 +1,22 @@
+ //in no arg  rt     i/p is given in class and o/p is returned to main like return a-b or int c=a-b retrn c 
+
+ import java.util.*;
+class Calculator{
+
+ public int sub()
+    {
+       Scanner in=new Scanner(System.in);
+       int d=in.nextInt();
+       int e=in.nextInt();
+       int f=d-e;
+       return f;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+Calculator s= new Calculator();
+	    int f=s.sub();
+     System.out.println("diff="+f); 
+	}
+}

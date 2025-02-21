@@ -1,0 +1,21 @@
+// since variable declared in class so if it should be called in main then it should be obj.datamember 
+ import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Add s= new Add();
+	    Scanner in=new Scanner(System.in);
+       s.a=in.nextInt();
+       s.b=in.nextInt();
+       s.c=s.a+s.b; 
+       s.sum();
+	}
+}
+class Add{
+    public int a,b,c;
+    public void sum()
+    {
+        System.out.println("sum="+c);
+        
+    }
+}

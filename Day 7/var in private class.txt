@@ -1,0 +1,27 @@
+// since variable declared in private class so if it can't  be called in main then call the get in display itself
+ import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Add s= new Add();
+	  
+       s.sum();
+	}
+}
+class Add{
+    private int a,b,c;
+    private void get()
+    {
+        Scanner in=new Scanner(System.in);
+       a=in.nextInt();
+       b=in.nextInt();
+       c=a+b; 
+        
+    }
+   
+    public void sum()
+    {
+        get();
+        System.out.println("sum="+c);
+    }
+}

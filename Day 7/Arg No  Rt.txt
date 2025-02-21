@@ -1,0 +1,20 @@
+//in    arg no rt  i/p is given as parameter from main and o/p is also claculated in class 
+
+
+ import java.util.*;
+class Calculator{
+
+  public void mul(int g,int h)
+    {
+
+       int i =g*h; 
+        System.out.println("mul="+h); 
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+Calculator s= new Calculator();
+	   s.mul(20,10);
+	}
+}

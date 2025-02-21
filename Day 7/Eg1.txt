@@ -1,0 +1,21 @@
+ import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	Add s=new Add();
+	s.sum();
+	}
+}
+class Add
+{
+    int a,b,c;
+    public void sum()
+    {
+        Scanner in=new Scanner(System.in);
+       a=in.nextInt();
+       b=in.nextInt();
+       c=a+b;
+       System.out.println("sum = "+c);
+    }
+}
