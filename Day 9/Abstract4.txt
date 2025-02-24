@@ -1,0 +1,23 @@
+abstract class Hi
+{
+    public final void show()
+    {
+        System.out.println(" Hi");
+    }
+}
+
+class Hello extends Hi 
+{
+    public void show(String message) {
+        System.out.println(" Hello: " + message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Hello obj = new Hello();
+        obj.show();
+        obj.show(" message"); 
+    }
+}

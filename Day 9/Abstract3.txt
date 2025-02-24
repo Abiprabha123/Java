@@ -1,0 +1,29 @@
+ import java.util.*;
+
+abstract class Hi 
+{
+    public final int a; 
+    public Hi(int a) 
+    {
+        this.a = a;
+    }
+    public void display()
+    {
+        System.out.println(a);
+    }
+}
+class Hello extends Hi 
+{
+    public Hello(int a) 
+    {
+        super(a);
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Hello h = new Hello(5); 
+        h.display(); 
+    }
+}

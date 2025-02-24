@@ -1,0 +1,34 @@
+import java.util.*;
+abstract class Circle
+{
+    static double area;
+    static double r;
+ static double cir;
+    
+   
+
+public static double cal_area(double r)
+{
+   Circle.r=r;
+    area=3.14*r*r;
+    return area;
+}
+public static double cal_cir(double r)
+{  
+     Circle.r=r;
+    cir=2*3.14*r;
+    return cir;
+}
+
+
+}
+public class Main
+{
+	public static void main(String[] args)
+	{
+double result=Circle.cal_area(5);
+double resul=Circle.cal_cir(5);
+System.out.println(result);
+System.out.println(resul);
+}
+}

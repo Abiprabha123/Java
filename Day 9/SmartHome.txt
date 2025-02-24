@@ -1,0 +1,58 @@
+class SmartHome 
+{
+    public static class Device 
+    {
+        public static final int MAX_SUPPORTED_DEVICES = 50;
+        private int id;
+        private String name;
+        public Device(int id, String name) 
+        {
+            this.id = id;
+            this.name = name;
+        }
+        public String displayDeviceInfo() 
+        {
+            return "Device ID: " + id + ", Name: " + name;
+        }
+    }
+    
+    public static class Configurations
+    {
+        public static final int MAX_ENERGY_USAGE = 5000;
+    }
+
+    public static abstract class Type 
+    {
+        public abstract String category();
+    }
+
+    public static class Lighting extends Type
+    {
+        public String category() 
+        {
+            return "Lighting Equipment";
+        }
+    }
+
+    public static class CoolingFan extends Type
+    {
+        public String category() 
+        {
+            return "Cooling Equipment";
+        }
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        SmartHome.Device s = new SmartHome.Device(1, "LED Bulb");
+        System.out.println(s.displayDeviceInfo());
+        System.out.println("Maximum Energy Usage: " + SmartHome.Configurations.MAX_ENERGY_USAGE);
+        SmartHome.Type light = new SmartHome.Lighting();
+        SmartHome.Type fan = new SmartHome.CoolingFan();
+        System.out.println("Lighting Category: " + light.category());
+        System.out.println("Cooling Fan Category: " + fan.category());
+    }
+}
