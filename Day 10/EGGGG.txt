@@ -1,0 +1,48 @@
+ import java.util.*;
+abstract class BankAccount
+{
+    private int accountNumber;
+    private int balance;
+    public double amount;
+    public static int  interestRate=5;
+    public BankAccount()
+    {
+        Scanner in=new Scanner(System.in);
+        accountNumber=in.nextInt();
+        balance=in.nextInt();
+    }
+    abstract double calculateInterest();
+    public void displayAccountDetails()
+    {
+        System.out.println("Bank Account No. :"+ accountNumber);
+        System.out.println("balance :"+ balance);
+        System.out.println("Interest Rate:"+ interestRate+"%");
+
+    }
+    public void getBalance()
+    {
+        return balance;
+    }
+}
+   class SavingsAccount extends BankAccount
+   {
+      public double calculateInterest()
+      {
+          return (getBalance()*interestRate)/100;
+          
+      }
+   }
+    
+    
+
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    SavingsAccount s= new SavingsAccount();
+	    s.displayAccountDetails();
+	      s.calculateInterest();
+	    
+	}
+}

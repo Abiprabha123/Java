@@ -1,0 +1,43 @@
+ interface IOB 
+{
+    default void method() 
+    {
+        System.out.println("Hello World1");
+    }
+}
+
+interface SBI
+{
+    default void method()
+    {
+        System.out.println("Hello World2");
+    }
+}
+
+interface CUB
+{
+    default void method()
+    {
+        System.out.println("Hello World3");
+    }
+}
+
+interface RBI extends SBI, IOB, CUB 
+{
+    default void method()
+    { 
+        IOB.super.method();
+        SBI.super.method();            
+        CUB.super.method(); 
+        System.out.println("Hello World4");
+    }
+}
+
+class Main implements RBI 
+{
+    public static void main(String[] args) 
+    {
+        Main b = new Main();
+        b.method(); 
+    }
+}

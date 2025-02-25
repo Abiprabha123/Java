@@ -1,0 +1,63 @@
+ public interface MediaPlayer
+ {
+    void play();
+    void pause();
+    void stop();
+}
+public class AudioPlayer implements MediaPlayer
+ {
+   
+    public void play()
+ {
+        System.out.println("Playing audio file...");
+    }
+
+   
+    public void pause() 
+{
+        System.out.println("Pausing audio file...");
+    }
+
+   
+    public void stop()
+ {
+        System.out.println("Stopping audio playback...");
+    }
+}
+public class VideoPlayer implements MediaPlayer {
+   
+    public void play() {
+        System.out.println("Playing video file...");
+    }
+
+   
+    public void pause() {
+        System.out.println("Pausing video file...");
+    }
+
+   
+    public void stop() {
+        System.out.println("Stopping video playback...");
+    }
+}
+public class StreamingPlayer implements MediaPlayer 
+{
+   
+    public void play() 
+{
+        System.out.println("Streaming content...");
+    }
+
+   
+    public void pause()
+ {
+        System.out.println("Pausing stream...");
+    }
+
+   
+    public void stop()
+ {
+        System.out.println("Stopping stream...");
+    }
+}
+
