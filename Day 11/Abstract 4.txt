@@ -1,0 +1,38 @@
+abstract class A {
+    void method1() {
+        System.out.println("method1");
+    }
+
+    abstract void method2();
+
+    abstract class B {
+        void method3() {
+            System.out.println("method3");
+        }
+
+        abstract void method4();
+    }
+}
+
+class C extends A {
+    void method2() {
+        System.out.println("method2");
+    }
+
+
+    class D extends B {
+        void method4() {
+            System.out.println("method4");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        C a = new C();
+        a.method1();  
+       a.method2();  
+C.D b = a.new D();
+        b.method3();  
+        b.method4();      }
+}

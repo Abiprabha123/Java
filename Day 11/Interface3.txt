@@ -1,0 +1,46 @@
+interface Interface1 {
+    static void method1() {
+        System.out.println("GM");
+    }
+
+    void method2(); 
+
+    default void method3() {
+        System.out.println("GN");
+    }
+}
+
+interface Interface2 
+{
+    static void method1()
+    { 
+        System.out.println("HI");
+    }
+
+    default void method3()
+    {
+        System.out.println("WELCOME");
+    }
+}
+
+class Main implements Interface2,Interface1 {  
+    public void method2() {
+        System.out.println("Good");
+    }
+
+    public void method3() {
+        Interface1.super.method3(); 
+        Interface2.super.method3(); 
+    }
+
+    public static void main(String[] args) {
+        Main a = new Main();
+
+        Interface2.method1();
+        Interface1.method1(); 
+
+        a.method2();
+
+        a.method3(); 
+    }
+}

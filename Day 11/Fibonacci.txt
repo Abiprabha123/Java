@@ -1,0 +1,34 @@
+
+
+
+
+
+class Fibonacci
+{
+    int F1=0;
+    int F2=1;
+    int F3;
+    void display()
+    {
+                   System.out.println(F1);
+           System.out.println(F2);
+
+        for(int i=2;i<16;i++)
+        {
+           F3=F1+F2;
+           F1=F2;
+           F2=F3;
+           System.out.println(F3);
+           
+        }
+    }
+    
+}
+class Main
+{
+    public static void main(String [] args)
+    {
+        Fibonacci f=new Fibonacci();
+        f.display();
+    }
+}

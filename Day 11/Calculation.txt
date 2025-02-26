@@ -1,0 +1,50 @@
+class Calculation
+{
+    float a=10;
+	   float b=20;
+	   double c=5;
+	   double d=3;
+	    short e=2;
+	   short  f=2;
+	   int g=8;
+	   int h=4;
+	   
+	  
+	   
+float calculate(float a,float b)    
+{
+   
+    return a+b;
+}
+double calculate(double c,double d)    
+{
+    return c-d;
+}
+int calculate(short e,short f)    
+{
+  
+    return e*f;
+}
+int calculate(int g,int h)    
+{
+   
+    return g/h;
+}
+
+}
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+
+    Calculation x=new Calculation();
+    System.out.println(x.calculate(x.a,x.b));
+        System.out.println(x.calculate(x.c,x.d));
+
+    System.out.println(x.calculate(x.e,x.f));
+
+    System.out.println(x.calculate(x.g,x.h));
+
+	}
+}
