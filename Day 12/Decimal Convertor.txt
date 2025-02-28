@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a decimal number: ");
+        int decimal = sc.nextInt();
+        int originalDecimal = decimal; 
+        String binary = "";
+        if (decimal == 0)
+        {
+            binary = "0";
+        }
+        while (decimal > 0)
+        {
+            int remainder = decimal % 2;
+            binary = remainder + binary; 
+            decimal /= 2;
+        }
+        System.out.println("Binary Representation: " + binary);
+
+        decimal = originalDecimal;
+        String octal = "";
+        if (decimal == 0)
+        {
+            octal = "0";
+        }
+        while (decimal > 0) 
+        {
+            int remainder = decimal % 8;
+            octal = remainder + octal;
+            decimal /= 8;
+        }
+        System.out.println("Octal Representation: " + octal);
+
+        decimal = originalDecimal;
+        String hexadecimal = "";
+        if (decimal == 0)
+        {
+            hexadecimal = "0";
+        }
+        while (decimal > 0) 
+        {
+            int remainder = decimal % 16;
+            if (remainder < 10) 
+            {
+                hexadecimal = remainder + hexadecimal; 
+            }
+            else 
+            {
+                hexadecimal = (char) ('A' + (remainder - 10)) + hexadecimal; 
+            }
+            decimal /= 16;
+        }
+        System.out.println("Hexadecimal Representation: " + hexadecimal);
+
+    }
+}

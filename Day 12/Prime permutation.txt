@@ -1,0 +1,49 @@
+public class Main 
+{
+    static boolean isPrime(int n)
+    {
+        if (n < 2) return false;
+
+        for (int i = 2; i * i <= n; i++)
+        {
+            if (n % i == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) 
+    {
+        int n = 1193;
+        int d = 1, mul = 1, temp = n;
+        boolean flag = isPrime(n);
+        if (flag) 
+        {
+            while (temp >= 10) 
+            {
+                temp /= 10;
+                mul *= 10;
+                d++;
+            }
+            temp = n; 
+            for (int i = 1; i < d; i++)
+            {
+                int leftDigit = temp / mul;
+                int remaining = temp % mul; 
+                temp = (remaining * 10) + leftDigit; 
+                System.out.println("Rotation: " + temp);
+                flag = isPrime(temp);
+                if (!flag) 
+                {
+                    System.out.println(n + " is NOT a Circular Prime");
+                    return;
+                }
+            }
+        }
+
+        if (flag)
+            System.out.println(n + " is a Circular Prime");
+    }
+}

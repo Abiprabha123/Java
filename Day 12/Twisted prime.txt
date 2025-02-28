@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main
+{
+    static boolean isPrime(int n)
+    {
+        if (n < 2) return false; 
+        for (int i = 2; i * i <= n; i++) 
+        {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+
+    static int reverseNumber(int n) 
+    {
+        int rev = 0;
+        while (n > 0) {
+            rev = rev * 10 + (n % 10);
+            n /= 10;
+        }
+        return rev;
+    }
+
+    static boolean isTwistedPrime(int n)
+    {
+        if (!isPrime(n)) return false;
+        int reversed = reverseNumber(n);
+        return isPrime(reversed);
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = in.nextInt();
+        in.close();
+
+        if (isTwistedPrime(n))
+        {
+            System.out.println(n + " is a Twisted Prime.");
+        } else {
+            System.out.println(n + " is NOT a Twisted Prime.");
+        }
+    }
+}

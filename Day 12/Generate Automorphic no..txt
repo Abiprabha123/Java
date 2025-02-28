@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt(); 
+        for (int i = 0; i < a; i++)
+        {
+            if (isAutomorphic(i))
+            {
+            System.out.println(i);
+            }
+        }
+    }
+
+    static boolean isAutomorphic(int i) 
+    {
+        int square = i *i;
+        
+        while (i > 0) {
+            if (i % 10 != square % 10)
+            {
+                return false;
+            }
+            i /= 10;
+            square /= 10;
+        }
+        return true;
+    }
+}
