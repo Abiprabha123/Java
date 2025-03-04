@@ -1,0 +1,27 @@
+class Shape
+{
+    double x, y; 
+}
+
+class Rectangle extends Shape 
+{
+    public Rectangle(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+
+    void display() 
+    {
+       System.out.println(x*y);
+    }
+}
+
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Rectangle r = new Rectangle(12.0, 13.0);
+        r.display();
+    }
+}

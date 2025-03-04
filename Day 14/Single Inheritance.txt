@@ -1,0 +1,31 @@
+class College 
+{
+    String collegeName = "HICET";
+
+    void showCollegeDetails()
+    {
+        System.out.println("College Name: " + collegeName);
+    }
+}
+
+class Student extends College 
+{
+    String studentName = "Abi Prabha";
+    int rollNumber = 50;
+
+    void showStudentDetails() 
+    {
+        System.out.println("Student Name: " + studentName);
+        System.out.println("Roll Number: " + rollNumber);
+    }
+}
+
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Student student = new Student();
+        student.showCollegeDetails();
+        student.showStudentDetails(); 
+    }
+}
