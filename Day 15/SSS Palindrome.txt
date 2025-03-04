@@ -1,0 +1,86 @@
+import java.util.*;
+class BuiltIn
+{
+      void builtin(String s)
+      { 
+          String s1= s;
+    String s13="";
+    for(int i=s1.length()-1;i>=0;i--)
+    {
+        s13=s13+s1.charAt(i);
+    }
+    
+         if(s1.equals(s13))
+         {
+             System.out.println("Builder is palindrome");
+         }
+         else{
+             System.out.println("Builder is not a palindrome");
+         }
+     }
+}
+class Builder
+{
+    
+     void builder(String s)  { 
+    StringBuilder s2=new StringBuilder(s);
+         if(s2.toString()==s2.reverse().toString())
+         {
+             System.out.println("Builder is palindrome");
+         }
+         else{
+             System.out.println("Builder is not a palindrome");
+         }
+     }
+    
+}
+class Buffer
+{
+      void buffer(String s)  { 
+    StringBuffer s3=new StringBuffer(s);
+         if(s3.toString()==s3.reverse().toString())
+         {
+             System.out.println("Buffer is palindrome");
+         }
+         else{
+             System.out.println("Buffer is not a palindrome");
+         }
+     }
+}
+class NotBuiltIn
+{
+     void notbuiltin(String s) 
+     {
+          String s4= s;
+         char[] charArray = s4.toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
+        while (left < right) 
+        {
+            if (charArray[left] != charArray[right]) {
+                System.out.println("Not BuiltIn is not palindrome");
+                return;
+            }
+            left++;
+            right--;
+        }
+          System.out.println("Not BuiltIn is palindrome");
+     }     
+}
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	 Scanner in=new Scanner(System.in); 
+	 System.out.println("Enter a String:");
+	 String s=in.nextLine();
+	 BuiltIn s11=new BuiltIn();
+	 Builder s21=new Builder();
+	 Buffer  s31=new Buffer();
+	 NotBuiltIn s41=new NotBuiltIn();
+	 s11.builtin(s);
+	 s21.builder(s);
+     s31.buffer(s);
+     s41.notbuiltin(s);
+	}
+}

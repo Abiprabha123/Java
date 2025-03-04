@@ -1,0 +1,60 @@
+import java.util.*;
+class BuiltIn
+{
+      void builtin(String s)
+      { 
+          String s1= s;
+        System.out.println(s1.substring(2, 7));
+   
+     }
+}
+class Builder
+{
+    
+     void builder(String s)  { 
+    StringBuilder s2=new StringBuilder(s);
+        System.out.println(s2.substring(2, 7));
+     }  
+    
+}
+class Buffer
+{
+      void buffer(String s)  { 
+    StringBuffer s3=new StringBuffer(s);
+        System.out.println(s3.substring(2, 7));
+   
+     }
+}
+class NotBuiltIn
+{
+     void notbuiltin(String s) 
+     {
+          String s4= s;
+          String s5="";
+          int start=2;
+          int end=7;
+          for(int i=start;i<=end-1;i++)
+          {
+              s5=s5+s4.charAt(i);
+          }
+          System.out.println(s5);
+     }
+        
+}
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	 Scanner in=new Scanner(System.in); 
+	 System.out.println("Enter a String:");
+	 String s=in.nextLine();
+	 BuiltIn s11=new BuiltIn();
+	 Builder s21=new Builder();
+	 Buffer  s31=new Buffer();
+	 NotBuiltIn s41=new NotBuiltIn();
+	 s11.builtin(s);
+	 s21.builder(s);
+     s31.buffer(s);
+     s41.notbuiltin(s);
+	}
+}

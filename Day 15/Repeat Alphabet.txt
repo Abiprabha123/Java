@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[])
+    {
+    Scanner in = new Scanner(System.in);
+    String str = in.next();
+           String s ="";
+        int n =0;
+        String ch ="";
+        for(int i=0;i<=str.length()-1;i++)
+        {
+            if(Character.isLetter(str.charAt(i)))
+            {
+                ch = ch + str.charAt(i);
+            }
+            
+            else{
+                n = str.charAt(i) - '0';
+                for (int j = 0; j < n; j++){
+                    s= s+ch;
+                }
+                ch = "";
+            }
+        }
+        s+=ch;
+        System.out.println(s);  
+    }
+}
+
