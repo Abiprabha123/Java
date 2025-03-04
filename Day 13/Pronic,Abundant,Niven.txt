@@ -1,0 +1,98 @@
+package Abi;
+
+import java.util.Scanner;
+
+public class AllInOne {
+	public static void main(String[] args)
+	{
+		Scanner in=new Scanner(System.in);
+		int a=in.nextInt();
+		if(isPronic(a) && isAbundant(a) && isNiven(a))
+		{
+			System.out.println(a +" is Pronic , Abundant and Niven");
+		}
+		else if(isPronic(a) && isAbundant(a) )
+		{
+			System.out.println(a +" is Pronic , Abundant and not Niven");
+		}
+		else if(isPronic(a) && isNiven(a))
+		{
+			System.out.println(a +" is Pronic ,  Niven and not Abundant ");
+		}
+		else if( isAbundant(a) && isNiven(a))
+		{
+			System.out.println(a +" is  Abundant, Niven and not Pronic");
+		}
+		else if(isPronic(a))
+		{
+			System.out.println(a +"is Pronic but not  Abundant and Niven");
+		}
+		else if( isAbundant(a) )
+		{
+			System.out.println(a +" is  Abundant but not Pronic and Niven");
+		}
+		else if( isNiven(a))
+		{
+			System.out.println(a +" is Niven but not Pronic and Abundant");
+		}
+		else
+		{
+			System.out.println(a +" is not Pronic ,not  Abundant and not Niven");
+		}
+		
+		
+
+}
+	static Boolean isPronic(int n)
+	{
+		for(int i=0;i<=n;i++)
+		{
+			if(i*(i+1)==n)
+			{
+				return true;
+			}		
+	}
+		return false;
+	}
+	static Boolean isAbundant(int n)
+	{
+		int sum=0;
+		for(int i=1;i<n;i++) 
+		{
+			if(n%i==0)
+			{
+				sum=sum+i;
+			}
+		}
+		if(sum>n)
+		{
+			return true;
+			
+		}
+		else
+		{
+			return false;
+			
+		}
+		
+	}
+	static Boolean isNiven(int n)
+	{
+		int b=n;
+		int sum=0;
+		while(n>0)
+		{
+			int temp=n%10;
+			sum=sum+temp;
+			n=n/10;
+		}
+		if(b%sum==0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

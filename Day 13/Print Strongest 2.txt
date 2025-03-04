@@ -1,0 +1,31 @@
+public class PrintStrongest2 {
+
+	public static void main(String[] args)
+	{ 
+		for(int i=1;i<1000;i++) 
+		{
+			
+		int sum=0;
+		int a=i;
+	    while(a>0)
+	    {
+	         int fact=1;
+	        int temp=a%10;
+	        for(int j=1;j<=temp;j++)
+	        {
+	            fact=fact*j;
+	        }
+	         sum=sum+fact;
+	        a=a/10;
+	       
+	      
+	    }
+	    if(sum==i) {
+        	System.out.println(i);
+        }
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class StrongestNumber {
+
+	public static void main(String[] args) {
+		
+			    Scanner in =new Scanner (System.in);
+			    System.out.println("Enter a number:");
+			    
+			    int a = in.nextInt();
+			    int b=a;
+			    in.close();
+			    int sum=0;
+			    while(a>0)
+			    {
+			         int fact=1;
+			        int temp=a%10;
+			        for(int i=1;i<=temp;i++)
+			        {
+			            fact=fact*i;
+			        }
+			         sum=sum+fact;
+			        a=a/10;
+			      
+			    }
+			    System.out.println(sum);
+			    if(b==sum)
+			    {
+			        System.out.println(b+"is strong number");
+			    }
+			    else
+			    {
+			        System.out.println(b+"is not a strong number");
+			    }
+			    
+			}
+		}
+

@@ -1,0 +1,23 @@
+package Abi;
+
+public class PrintHarshad {
+    public static void main(String[] args)
+    {
+        System.out.println("Harshad Numbers between 200 and 2500:");
+        for (int i = 500; i <= 2500; i++) 
+        {
+            int a = i;
+            int sum = 0;
+          
+            while (a > 0)
+            {
+                sum += a % 10;
+                a /= 10; 
+            }    
+            if (sum != 0 && i % sum == 0)
+            {
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
