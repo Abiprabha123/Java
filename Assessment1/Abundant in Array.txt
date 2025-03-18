@@ -1,0 +1,70 @@
+package Abi;
+import java.util.*;
+public class AbundantInArray {
+
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("enter row: ");
+        int r = in.nextInt();
+        System.out.print("enter column: ");
+        int c = in.nextInt();
+
+        int[][] arr = new int[r][c];
+
+        System.out.println("enter elements of matrix:");
+        for (int i = 0; i < r; i++) 
+        {
+            for (int j = 0; j < c; j++) 
+            {
+                arr[i][j] = in.nextInt();
+            }
+        }
+
+        System.out.println("original matrix:");
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < c; j++) 
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+             System.out.println("Abundant Values");
+         for (int i = 0; i < r; i++) {
+             for(int j=0;j<c;j++)
+            if (isAbundant(arr[i][j])) {
+                System.out.print(arr[i][j] + " ");
+            }
+        }
+        
+        
+        
+    }
+    static Boolean isAbundant(int n)
+	{
+		int sum=0;
+		for(int i=1;i<n;i++) 
+		{
+			if(n%i==0)
+			{
+				sum=sum+i;
+			}
+		}
+		if(sum>n)
+		{
+			return true;
+			
+		}
+		else
+		{
+			return false;
+			
+		}
+		
+	}
+    
+}
+
+
