@@ -1,0 +1,25 @@
+class Solution 
+{
+    public int reverse(int x)
+     {
+        String str = Integer.toString(x);
+        boolean isNegative = str.charAt(0) == '-';
+        String reversedStr = isNegative ? new StringBuilder(str.substring(1)).reverse().toString()
+                                         : new StringBuilder(str).reverse().toString();
+        
+        String intMax = "2147483647"; 
+        String intMin = "2147483648"; 
+        if (reversedStr.length() == intMax.length()) {
+            if (isNegative) 
+            {
+                if (reversedStr.compareTo(intMin) > 0) return 0;
+            } 
+            else 
+            {
+                if (reversedStr.compareTo(intMax) > 0) return 0;
+            }
+        }
+        int reversed = Integer.parseInt(reversedStr);
+        return isNegative ? -reversed : reversed;
+    }
+}
