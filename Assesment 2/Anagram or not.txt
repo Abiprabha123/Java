@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) { 
+        Scanner scan = new Scanner(System.in);
+        String s1 = scan.nextLine().trim();
+        String s2 = scan.nextLine().trim();                           
+        s1 = s1.replaceAll("\\s+", "").toLowerCase();
+        s2 = s2.replaceAll("\\s+", "").toLowerCase();       
+        if (s1.length() != s2.length())
+        {
+            System.out.println("NO");
+            return;
+        }
+              int[] charCount = new int[256];
+        for (int i = 0; i < s1.length(); i++)
+        {
+            charCount[s1.charAt(i)]++;
+        }
+ 
+        for (int i = 0; i < s2.length(); i++) 
+        {
+            charCount[s2.charAt(i)]--;
+        }
+        for (int i = 0; i < charCount.length; i++) 
+        {
+            if (charCount[i] != 0) {
+                System.out.println("NO");
+                return; 
+            }
+        }
+        System.out.println("YES");
+    }
+}

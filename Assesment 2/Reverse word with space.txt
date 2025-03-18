@@ -1,0 +1,31 @@
+ import java.util.*;
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        String s1 = in.nextLine().trim();    
+        boolean hasQuotes = s1.startsWith("\"") && s1.endsWith("\""); 
+        if (hasQuotes) 
+        {
+           s1 = s1.substring(1, s1.length() - 1).trim();
+        }  
+        String[] words = s1.split("\\s+"); 
+        int i = 0, j = words.length - 1;
+        while (i < j) 
+        {
+            String temp = words[i];
+            words[i] = words[j];
+            words[j] = temp;
+            i++;
+            j--;
+        }   
+        String s2 = String.join(" ", words);
+        if (hasQuotes)
+        {
+            s2 = "\"" + s2 + "\"";
+        }
+
+        System.out.println(s2);
+    }
+}
