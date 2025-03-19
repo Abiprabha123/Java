@@ -1,0 +1,70 @@
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of rows and columns :");
+        int  n= in.nextInt();
+       
+        int arr[][] = new int[n][n];
+        System.out.println("Enter the values for the matrix:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("Value for position " + i + "," + j + ": ");
+                arr[i][j] = in.nextInt();
+            }
+        }
+
+        System.out.println("Original Matrix:");
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = 0; j < n; j++) 
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        int rotated[][] = new int[n][n]; 
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = 0; j < n; j++) 
+            {
+                rotated[i][j]=arr[j][i];
+            }
+            
+        }
+        
+         System.out.println("Transpose Matrix:");
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++) 
+            {
+                System.out.print(rotated[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        int rev[][] = new int[n][n]; 
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++) 
+            {
+                rev[i][j] = rotated[n-i-1][j];
+            }
+        }
+
+        System.out.println("Matrix after 90-degree anticlockwise rotation:");
+        for (int i = 0; i < n; i++)
+        { 
+            for (int j = 0; j < n; j++) 
+            { 
+                System.out.print(rev[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+      
+    }
+}
